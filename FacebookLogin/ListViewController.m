@@ -18,6 +18,7 @@
 @property (strong, nonatomic) NSString *urlImageUser;
 @property (strong, nonatomic) NSString *userId;
 @property (strong, nonatomic) NSString *accessToken;
+
 @end
 
 @implementation ListViewController
@@ -39,6 +40,8 @@
     [self.indicator startAnimating];
     self.userImage.layer.cornerRadius = 20.0;
     self.userImage.layer.masksToBounds = YES;
+    self.shareButton.hidden = YES;
+    self.nameListButton.hidden = YES;
 }
 
 - (void)didReceiveMemoryWarning
@@ -49,12 +52,15 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    ViewController *viewController = [segue destinationViewController];
-    viewController.namelist = self.namelist;
-    viewController.idList = self.idList;
-    NSUInteger count = [self.idList count];
-    NSLog(@":::%lu:::", (unsigned long)count);
-    viewController.count = count;
+    if ([[segue identifier] isEqualToString:@"showName"])
+    {
+        ViewController *viewController = [segue destinationViewController];
+        viewController.namelist = self.namelist;
+        viewController.idList = self.idList;
+        NSUInteger count = [self.idList count];
+        NSLog(@":::%lu:::", (unsigned long)count);
+        viewController.count = count;
+    }
 }
 
 - (IBAction)back:(id)sender
@@ -82,6 +88,8 @@
         NSData *data = [NSData dataWithContentsOfURL:url];
         self.userImage.image = [[UIImage alloc] initWithData:data];
         [self.indicator stopAnimating];
+        self.shareButton.hidden = NO;
+        self.nameListButton.hidden = NO;
     }];
 }
 

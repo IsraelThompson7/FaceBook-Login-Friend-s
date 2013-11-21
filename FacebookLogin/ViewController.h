@@ -12,8 +12,8 @@
 
 @property (strong, nonatomic) NSArray *namelist;
 @property (strong, nonatomic) NSArray *idList;
-- (IBAction)back:(id)sender;
-- (IBAction)Photo:(id)sender;
 @property (nonatomic) NSInteger count;
+
+- (IBAction)back:(id)sender;
 
 @end

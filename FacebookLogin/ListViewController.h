@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ListViewController : UIViewController
+
 @property (strong, nonatomic) NSArray *namelist;
 @property (strong, nonatomic) NSArray *idList;
 
@@ -16,5 +17,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *userName;
 @property (strong, nonatomic) IBOutlet UIImageView *userImage;
 @property (strong, nonatomic) IBOutlet UIActivityIndicatorView *indicator;
+@property (strong, nonatomic) IBOutlet UIButton *nameListButton;
+@property (strong, nonatomic) IBOutlet UIButton *shareButton;
 
 @end

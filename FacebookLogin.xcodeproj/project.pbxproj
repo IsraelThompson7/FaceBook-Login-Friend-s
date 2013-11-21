@@ -15,6 +15,8 @@
 		1878B2F9183B704C00C5D8A9 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1878B2F8183B704C00C5D8A9 /* Social.framework */; };
 		18AB4B861839E0A40097D755 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AB4B851839E0A40097D755 /* PhotoViewController.m */; };
 		18AB4B881839E4FF0097D755 /* page.png in Resources */ = {isa = PBXBuildFile; fileRef = 18AB4B871839E4FF0097D755 /* page.png */; };
+		18BECAD4183DCE74000A9079 /* UploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BECAD3183DCE74000A9079 /* UploadViewController.m */; };
+		18BECAD6183DE21E000A9079 /* select.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BECAD5183DE21E000A9079 /* select.png */; };
 		18C2D07F1836010A002F4DCC /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18C2D07E1836010A002F4DCC /* Storyboard.storyboard */; };
 		18C2D08418361494002F4DCC /* SelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2D08318361494002F4DCC /* SelectViewController.m */; };
 		18C2D086183624CA002F4DCC /* login_with_facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 18C2D085183624CA002F4DCC /* login_with_facebook.png */; };
@@ -56,6 +58,9 @@
 		18AB4B841839E0A40097D755 /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
 		18AB4B851839E0A40097D755 /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
 		18AB4B871839E4FF0097D755 /* page.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page.png; sourceTree = "<group>"; };
+		18BECAD2183DCE74000A9079 /* UploadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadViewController.h; sourceTree = "<group>"; };
+		18BECAD3183DCE74000A9079 /* UploadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadViewController.m; sourceTree = "<group>"; };
+		18BECAD5183DE21E000A9079 /* select.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = select.png; sourceTree = "<group>"; };
 		18C2D07E1836010A002F4DCC /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		18C2D08218361494002F4DCC /* SelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectViewController.h; sourceTree = "<group>"; };
 		18C2D08318361494002F4DCC /* SelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectViewController.m; sourceTree = "<group>"; };
@@ -147,9 +152,12 @@
 		18FA0FAD1835F485005316F9 /* FacebookLogin */ = {
 			isa = PBXGroup;
 			children = (
+				18BECAD5183DE21E000A9079 /* select.png */,
 				18FA0FB61835F485005316F9 /* AppDelegate.h */,
 				18FA0FB71835F485005316F9 /* AppDelegate.m */,
 				18C2D07E1836010A002F4DCC /* Storyboard.storyboard */,
+				18BECAD2183DCE74000A9079 /* UploadViewController.h */,
+				18BECAD3183DCE74000A9079 /* UploadViewController.m */,
 				18C2D08218361494002F4DCC /* SelectViewController.h */,
 				18C2D08318361494002F4DCC /* SelectViewController.m */,
 				18C2D08A183630AD002F4DCC /* ListViewController.h */,
@@ -283,6 +291,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18BECAD6183DE21E000A9079 /* select.png in Resources */,
 				18FA0FC01835F485005316F9 /* Images.xcassets in Resources */,
 				1878B2F7183B575D00C5D8A9 /* twitter.png in Resources */,
 				18AB4B881839E4FF0097D755 /* page.png in Resources */,
@@ -309,6 +318,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18BECAD4183DCE74000A9079 /* UploadViewController.m in Sources */,
 				18C2D08418361494002F4DCC /* SelectViewController.m in Sources */,
 				18AB4B861839E0A40097D755 /* PhotoViewController.m in Sources */,
 				18FA0FBE1835F485005316F9 /* ViewController.m in Sources */,

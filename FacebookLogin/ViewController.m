@@ -86,7 +86,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)loginButton:(id)sender
+/*- (IBAction)loginButton:(id)sender
 {
     // get the app delegate so that we can access the session property
     AppDelegate *appDelegate = [[UIApplication sharedApplication]delegate];
@@ -114,7 +114,8 @@
             [self updateView];
         }];
     }
-}
+}*/
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [self.namelist count];
@@ -133,9 +134,7 @@
 {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
-- (IBAction)Photo:(id)sender
-{
-}
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     PhotoViewController *photoViewController = [segue destinationViewController];

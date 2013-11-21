@@ -11,12 +11,13 @@
 #import <Social/Social.h>
 
 @interface PhotoViewController : UIViewController <iCarouselDataSource, iCarouselDelegate>
-- (IBAction)back:(id)sender;
 
+@property (nonatomic) NSInteger count;
 @property (strong, nonatomic) NSArray *namelist;
 @property (strong, nonatomic) NSArray *idList;
+
+- (IBAction)back:(id)sender;
 @property (strong, nonatomic) IBOutlet iCarousel *SliderView;
-@property (nonatomic) NSInteger count;
 @property (strong, nonatomic) IBOutlet UILabel *detailLabel;
 
 @end

@@ -10,6 +10,7 @@
 #define PHOTO_ID @"id"
 
 @interface SelectViewController : UIViewController
+
 - (IBAction)loginWithFaceBook:(id)sender;
 @property (strong, nonatomic) IBOutlet UIButton *loginWithFacebook;
 @property (strong, nonatomic) IBOutlet UILabel *userState;
