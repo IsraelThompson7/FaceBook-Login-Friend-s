@@ -8,12 +8,16 @@
 
 #import "PhotoViewController.h"
 
+#define DEGREES_TO_RADIANS(x) (M_PI * x / 180.0)
+
 @interface PhotoViewController ()
 
 @property (nonatomic, strong) NSMutableArray *items;
 @property (nonatomic, strong) UIView *share;
 @property (nonatomic, strong) NSData *imageData;
 @property (nonatomic, strong) NSURL *photoURL;
+@property (nonatomic, strong) UIImageView *ribbonImage;
+@property (nonatomic, strong) UILabel *ribbonLabel;
 
 @end
 
@@ -64,6 +68,25 @@
     self.share.hidden = YES;
     self.share.alpha = 0.0;
     self.detailLabel.alpha = 0.0;
+    
+    //for Ribbon
+    self.ribbonImage = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"SpecialOfferRibbon.png"]];
+    [self.ribbonImage setFrame:CGRectMake(0, 110, 100, 100)];
+    [self.ribbonImage setBackgroundColor:[UIColor clearColor]];
+    //For Text on ribbon
+    self.ribbonLabel = [[UILabel alloc]init];
+    [self.ribbonLabel setFrame:CGRectMake(3, 135, 65, 25)];
+    self.ribbonLabel.layer.cornerRadius = 10.0f;
+    self.ribbonLabel.textColor = [UIColor whiteColor];
+    self.ribbonLabel.backgroundColor = [UIColor clearColor];
+    self.ribbonLabel.numberOfLines = 02.0f;
+    self.ribbonLabel.lineBreakMode = NSLineBreakByTruncatingHead;
+    self.ribbonLabel.transform = CGAffineTransformMakeRotation (DEGREES_TO_RADIANS(-45));
+    NSInteger indexpart = self.SliderView.currentItemIndex;
+    NSString *idName = [self.idList objectAtIndex:indexpart];
+    self.ribbonLabel.text = idName;
+    [self.view addSubview:self.ribbonImage];
+    [self.view addSubview:self.ribbonLabel];
 }
 
 #pragma mark -
@@ -76,6 +99,13 @@
     return [self.idList count];
 }
 
+- (void)carouselWillBeginScrollingAnimation:(iCarousel *)carousel
+{
+    NSInteger indexpart = self.SliderView.currentItemIndex;
+    NSString *idName = [self.idList objectAtIndex:indexpart];
+    self.ribbonLabel.text = idName;
+}
+
 - (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSUInteger)index reusingView:(UIView *)view
 {
     UILabel *label = nil;
@@ -85,7 +115,7 @@
     {
         view = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 300.0f, 300.0f)];
         ((UIImageView *)view).image = [UIImage imageNamed:@"page.png"];
-        view.layer.cornerRadius = 25.0;
+        view.layer.cornerRadius = 0.0;
         view.layer.masksToBounds = YES;
         //view.contentMode = UIViewContentModeCenter;
         label = [[UILabel alloc] initWithFrame:view.bounds];
@@ -125,7 +155,7 @@
     
     //Add Two Buttons
     
-    UIButton *IdButton=[UIButton buttonWithType:UIButtonTypeCustom];
+    /*UIButton *IdButton=[UIButton buttonWithType:UIButtonTypeCustom];
     [IdButton setFrame:CGRectMake(0, 0, 100, 65)];
     [IdButton setBackgroundColor:[UIColor clearColor]];
     IdButton.titleLabel.font = [UIFont fontWithName:@"Helvetica" size:15];
@@ -133,6 +163,7 @@
     [IdButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
     [view addSubview:IdButton];
     [IdButton addTarget:self action:@selector(IdButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+    */
     
     UIButton *NameButton=[UIButton buttonWithType:UIButtonTypeCustom];
     [NameButton setFrame:CGRectMake(200, 0, 100, 65)];
@@ -150,8 +181,10 @@
     [share setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
     [view addSubview:share];
     [share addTarget:self action:@selector(shareAction:) forControlEvents:UIControlEventTouchUpInside];
-    
+
     return view;
+    
+   
 }
 
 - (void)IdButtonAction:(id)sender

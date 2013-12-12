@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		185D3A81183CA08D0060821E /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 185D3A80183CA08D0060821E /* iCarousel.m */; };
-		185D3A83183CA0A20060821E /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 185D3A82183CA0A20060821E /* FacebookSDK.framework */; };
 		1878B2F3183B444600C5D8A9 /* ios_share.png in Resources */ = {isa = PBXBuildFile; fileRef = 1878B2F2183B444600C5D8A9 /* ios_share.png */; };
 		1878B2F6183B575D00C5D8A9 /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = 1878B2F4183B575D00C5D8A9 /* share.png */; };
 		1878B2F7183B575D00C5D8A9 /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 1878B2F5183B575D00C5D8A9 /* twitter.png */; };
 		1878B2F9183B704C00C5D8A9 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1878B2F8183B704C00C5D8A9 /* Social.framework */; };
+		1894AC8E1859900C00CD1D41 /* SpecialOfferRibbon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1894AC8D1859900C00CD1D41 /* SpecialOfferRibbon.png */; };
+		1894AC8F185990C100CD1D41 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 185D3A82183CA0A20060821E /* FacebookSDK.framework */; };
 		18AB4B861839E0A40097D755 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AB4B851839E0A40097D755 /* PhotoViewController.m */; };
 		18AB4B881839E4FF0097D755 /* page.png in Resources */ = {isa = PBXBuildFile; fileRef = 18AB4B871839E4FF0097D755 /* page.png */; };
 		18BECAD4183DCE74000A9079 /* UploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BECAD3183DCE74000A9079 /* UploadViewController.m */; };
@@ -55,6 +56,7 @@
 		1878B2F4183B575D00C5D8A9 /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
 		1878B2F5183B575D00C5D8A9 /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter.png; sourceTree = "<group>"; };
 		1878B2F8183B704C00C5D8A9 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		1894AC8D1859900C00CD1D41 /* SpecialOfferRibbon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SpecialOfferRibbon.png; sourceTree = "<group>"; };
 		18AB4B841839E0A40097D755 /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
 		18AB4B851839E0A40097D755 /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
 		18AB4B871839E4FF0097D755 /* page.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page.png; sourceTree = "<group>"; };
@@ -98,7 +100,7 @@
 				18FA0FAA1835F485005316F9 /* CoreGraphics.framework in Frameworks */,
 				18FA0FAC1835F485005316F9 /* UIKit.framework in Frameworks */,
 				18FA0FA81835F485005316F9 /* Foundation.framework in Frameworks */,
-				185D3A83183CA0A20060821E /* FacebookSDK.framework in Frameworks */,
+				1894AC8F185990C100CD1D41 /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,6 +170,7 @@
 				18C2D088183626D5002F4DCC /* CustomCell.m */,
 				18AB4B841839E0A40097D755 /* PhotoViewController.h */,
 				18AB4B851839E0A40097D755 /* PhotoViewController.m */,
+				1894AC8D1859900C00CD1D41 /* SpecialOfferRibbon.png */,
 				1878B2F4183B575D00C5D8A9 /* share.png */,
 				1878B2F5183B575D00C5D8A9 /* twitter.png */,
 				18AB4B871839E4FF0097D755 /* page.png */,
@@ -297,6 +300,7 @@
 				18AB4B881839E4FF0097D755 /* page.png in Resources */,
 				18C2D07F1836010A002F4DCC /* Storyboard.storyboard in Resources */,
 				1878B2F6183B575D00C5D8A9 /* share.png in Resources */,
+				1894AC8E1859900C00CD1D41 /* SpecialOfferRibbon.png in Resources */,
 				18FA0FB21835F485005316F9 /* InfoPlist.strings in Resources */,
 				18C2D086183624CA002F4DCC /* login_with_facebook.png in Resources */,
 				1878B2F3183B444600C5D8A9 /* ios_share.png in Resources */,
@@ -453,6 +457,7 @@
 					"$(inherited)",
 					/Users/apple/Desktop/FacebookLogin,
 					/Users/apple/Desktop/FacebookLogin/FacebookLogin,
+					"/Users/apple/Desktop/FaceBook-Login-Friend-s/FacebookLogin",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FacebookLogin/FacebookLogin-Prefix.pch";
@@ -476,6 +481,7 @@
 					"$(inherited)",
 					/Users/apple/Desktop/FacebookLogin,
 					/Users/apple/Desktop/FacebookLogin/FacebookLogin,
+					"/Users/apple/Desktop/FaceBook-Login-Friend-s/FacebookLogin",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FacebookLogin/FacebookLogin-Prefix.pch";
